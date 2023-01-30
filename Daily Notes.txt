@@ -1,0 +1,196 @@
+
+Day 1:-
+=======
+Spring Framework:
+=================
+		Spring is NON-INVASIVE framework,using spring we can create LIGHT WEIGHT and LOOSLEY COUPLED applications
+					INVASIVE										HEAVY WEIGHT	 TIGHTLY COUPLED
+
+
+	framework:
+	==========
+
+	java		-->boiler plate code 
+	framework-->ready made 
+
+			2 types frameworks
+			
+				1)invasive (struts)-these frameworks will force developer/programer to implement predefined API 
+				
+				2)non invasive (hibernate,spring)-these frameworks will never force developer/programer to implement predefined API 
+
+	JSP,EJB,JSF
+	Servlets
+=============
+to make web applications()
+
+javax.servlet
+
+	1)implements Servlet (I)   abstract methods---5 methods
+	
+	2)extends GenericServlet(C) 5
+	
+	3)extends HttpServlet(C)  11 methods 
+
+Login.java
+class Login extends HttpServlet
+{
+//11 methods
+
+}heavy weight 
+
+100*11=1100
+
+
+	servlet,EJB,JSf,Struts... heavy weight component 
+
+
+
+EJB--->Rod Johnson 2003 interface21--->spring framework 1.x----- 6.x
+
+
+	light weight applications
+
+
+
+
+Java 
+
+
+									A B C D 
+class Hello
+{
+ public void m1(){
+ 
+ 
+ }
+
+}
+
+
+class Welcome
+{
+ public void m2(){
+	Hello obj=new Hello();
+	obj.m1();
+ 
+ }
+
+}
+
+		DEPENDENCY INJECTION
+
+SPRING :WILL NEVER CREATE OBJECT 
+
+SPRING CONTAINER 
+
+FEATURES OF SPRING FRAMEWORK:
+==============================
+LIGHT WEIGHT 
+
+IOC(INVERSION OF CONTROL)
+
+CONTAINER  ->BeanFactory,ApplicationContext
+
+
+
+Entire object life cycle --->Container
+
+struts,jpa,jdbc,transaction......
+
+POJO's 
+
+JEE
+
+
+20 modules
+
+SPRING CORE
+spring jdbc
+spring mvc
+spring jpa
+spring security
+spring web
+spring aop
+......
+
+
+
+SPRING CORE/IOC/Dependency Injection Module:
+============================================
+
+		IOC container --->
+
+		1)instantiation of bean/class
+		2)wiring  the beans 
+		3)configuring the beans
+		4)managing the beans 
+		5)destory bean
+		
+	life cycle a object 
+
+		BeanFactory,ApplicationContext
+
+
+
+Employee
+{
+id 
+name 
+salary
+address
+designation
+......
+
+}
+
+CONTAINER --->CONFIGURATION FILE---> XML
+
+
+
+CLIENT 
+
+		JSE         JEE        JME
+
+
+springconfig.xml
+
+<beans>
+
+<bean id="" class="">
+
+
+
+<bean>
+
+
+
+</beans>
+
+
+Differernce between BeanFactory and ApplicationContext
+	BeanFactory 			ApplicationContext
+1)  Lazy							Eager
+
+2)	small scale					large scale
+
+Spring core 
+the dependencies can be injected by using 2 
+
+	1)setter injection				<beans ><bean><property>ref,autowire
+	
+	2)constructor injection			<beans ><bean><constructor-arg>ref
+	
+	
+	autowiring			3 values	autowire=(byName,byType),constructor
+	
+												XML config/Annotations/Java config
+	
+	
+	Dependency Injection--->design pattern
+	
+	
+	
+	
+	
+	
