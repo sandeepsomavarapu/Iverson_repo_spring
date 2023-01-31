@@ -3,6 +3,7 @@ ANNOTATIONS :
 ========================================
 
 1)  @Entity :
+
     The @Entity annotation specifies that the class is an entity and is mapped to a database table. All the fields of the entity class will be 
     the columns in the database table. 
 
