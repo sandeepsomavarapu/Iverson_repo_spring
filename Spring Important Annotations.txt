@@ -1,0 +1,154 @@
+
+ANNOTATIONS :
+========================================
+
+1)  @Entity :
+    The @Entity annotation specifies that the class is an entity and is mapped to a database table. All the fields of the entity class will be 
+    the columns in the database table. 
+
+2)  @Table :
+    The @Table annotation specifies the name of the database table to be used for mapping.
+
+3)  @Column :
+    Is used to specify the mapped column for a persistent property or field. If no Column annotation is specified, the default values apply.
+
+4)  @Id :
+    It will set the particular field as the primary key of the database table.
+
+5)  @GeneratedValue
+    Annotation specifies that a value will be automatically generated for that field.
+
+6)  @OneToOne :
+    It will set a relation of one to one between the tables. Particular record of one table should have only one related record in the other
+    table.
+
+7)  @OneToMany :
+    It will set a relation of one to many between the tables. Particular record of one table can have more than one related records in the 
+    other table.
+
+8)  @ManyToOne :
+    It is vice versa of @OneToMany. Many records of one table can have only one related record in the other table.
+
+9)  @ManyToMany :
+    It will set a relation of many to many between the tables. Many records of one table can have many related records in the other table.
+
+10) @EnableWebMvc :
+    Adding this annotation to a @Configuration class imports the Spring MVC configuration from WebMvcConfigurationSupport which is the main
+    class providing the configuration behind the MVC Java config.
+
+11) @Configuration :
+    Spring @Configuration annotation is part of the spring core framework. Spring Configuration annotation indicates that the class has
+    @Bean definition methods. So Spring container can process the class and generate Spring Beans to be used in the application.
+
+12) @Bean :
+    Spring @Bean Annotation is applied on a method to specify that it returns a bean to be managed by Spring context. Spring Bean 
+    annotation is usually declared in Configuration classes methods. In this case, bean methods may reference other @Bean methods in the
+    same class by calling them directly.
+
+13) @Service :
+    It is just to declare a class as service class. We can also use @Component too.
+
+14) @Repository :
+    It is just to declare a class as dao class. We can also use @Component too.
+
+15) @Autowired :
+    Spring @Autowired annotation is used for automatic dependency injection. Spring framework is built on dependency injection and we
+    inject the class dependencies through spring bean configuration file.
+
+16) @PersistenceContext :
+    An instance of the interface javax. persistence. Entity Manager is used to persist, retrieve, update and remove entities to/from
+    the database.The instance of EntityManager is managed automatically by the container. We typically obtain the instance of
+    EntityManager by injecting it with @PersistenceContext.
+
+17) @Transactional :
+    Spring framework provides an abstract layer on top of different underlying transaction management APIs. Spring's transaction support
+    aims to provide an alternative to EJB transactions by adding transaction capabilities to POJOs. Spring supports both programmatic and
+    declarative transaction management.
+
+18) @Controller :
+    Spring Controller annotation can be applied on classes only. It’s used to mark a class as a web request handler. It’s mostly used
+    with Spring MVC application.
+
+19) @RestController :
+    Spring @RestController is a convenience annotation that is itself annotated with @Controller and @ResponseBody. This annotation is
+    used to mark a class as request handler for RESTful web services.
+
+20) @WebServlet :
+    The @WebServletannotation is used to declare a servlet. The annotated class must extend the javax.servlet.http.HttpServlet class.
+
+21) @RequestMapping :
+    @RequestMapping is one of the most widely used Spring MVC annotation. RequestMapping annotation is used to map web requests onto
+    specific handler classes and/or handler methods. @RequestMapping can be applied to the controller class as well as handler methods.
+
+22) @RequestBody :
+    If a method parameter is annotated with @RequestBody, Spring will bind the incoming HTTP request body to that parameter.
+    While doing that, Spring will use HTTP Message converters to convert the HTTP request body into domain object.
+
+23) @ResponseBody : 
+    If a method is annotated with @ResponseBody, Spring will bind the return value to outgoing HTTP response body. While doing that,
+    Spring will use HTTP Message converters to convert the return value to HTTP response body.
+
+24) @RequestParam :
+    We can use @RequestParam to extract query parameters, form parameters and even files from the request.
+
+25) @PathVariable :
+    @PathVariable is used to extract values from the HTTP request.
+
+26) @GetMapping :
+    @GetMapping annotation maps HTTP GET requests onto specific handler methods. It is a composed annotation that acts as a shortcut
+    for @RequestMapping(method = RequestMethod.GET).
+
+27) @PostMapping :
+    @PostMapping annotation maps HTTP POST requests onto specific handler methods. It is a composed annotation that acts as a shortcut
+    for @RequestMapping(method = RequestMethod.POST).
+
+28) @PutMapping :
+    @PutMapping annotation maps HTTP PUT requests onto specific handler methods. It is a composed annotation that acts as a shortcut
+    for @RequestMapping(method = RequestMethod.PUT).
+
+29) @DeleteMapping :
+    @DeleteMapping annotation maps HTTP DELETE requests onto specific handler methods. It is a composed annotation that acts as a shortcut
+    for @RequestMapping(method = RequestMethod.DELETE).
+
+30) @CrossOrigin :
+    @CrossOrigin annotation is use to handle Cross-Origin-Resource-Sharing (CORS). This annotation is used at class level as well as
+    method level in RESTful Web service controller. It can safely connect one web application to the other web application.
+
+31) @Component :
+    Spring Component annotation is used to denote a class as Component. It means that Spring framework will autodetect these classes
+    for dependency injection when annotation-based configuration and classpath scanning is used.
+
+32) @ComponentScan :
+    Using component scan is one method of asking Spring to detect Spring-managed components. Spring needs the information to locate and
+    register all the Spring components with the application context when the application starts.
+
+33) @EnableTransactionManagement : 
+    To use Spring declarative transaction we need to use @EnableTransactionManagement on the configuration class and @Transactional
+    annotation on the classes/methods where we want to enable the transaction.
+
+34) @Override :
+    Overriding in Java. In any object-oriented programming language, Overriding is a feature that allows a subclass or child class to
+    provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+
+35) @SpringBootApplication :
+    Basically it is a combination of three annotations. They are :-
+    -> @Configuration
+    -> @ComponentScan
+    -> @EnableAutoConfiguration
+
+
+40) @FunctionalInterface :
+    This annotation will make an interface as a funvtional interface. A functional interface is an interface that contains only one
+    abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent
+    the instance of a functional interface. A functional interface can have any number of default methods. Runnable, Comparable are some
+    of the examples of functional interfaces.
+
+41) @Scope : 
+    By using this annotation, we can tell the spring about the creation of the bean instance. For eg, in order to produce a new bean
+    instance each time when it is needed, we should annotate the bean class as @Scope("prototype"). Similarly,
+    if you want Spring to return the same bean instance each time when it is needed, we should annotate the bean class as @Scope("singleton").
+
+42) @Qualifier : 
+    There may be a situation when you create more than one bean of the same type and want to wire only one of them with a property.
+    In such cases, you can use the @Qualifier annotation along with @Autowired to remove the confusion by specifying which exact bean
+    will be wired.
